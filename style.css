@@ -52,26 +52,30 @@ a{color:inherit;text-decoration:none}
   -webkit-backdrop-filter:blur(10px);
   border-bottom:1px solid var(--border);
 }
-.nav-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.nav-scroll::-webkit-scrollbar{display:none}
-.nav-in{display:flex;align-items:center;gap:7px;padding:9px 16px;width:max-content;margin:0 auto}
+.nav-in{display:flex;align-items:center;gap:6px;padding:9px 12px;max-width:520px;margin:0 auto}
 .nav-in a{
   flex-shrink:0;font-size:11.5px;font-weight:500;
-  padding:5px 13px;border-radius:999px;
+  padding:5px 12px;border-radius:999px;
   background:#fff;border:1px solid var(--border);
   color:var(--ink-soft);white-space:nowrap;
   transition:all .25s ease;
 }
-.nav-in .brand{font-weight:700;display:flex;align-items:center;gap:5px;padding-left:5px}
-.nav-in .brand img{width:20px;height:20px;border-radius:50%;object-fit:cover}
-.nav-in .brand.salon{color:var(--pink-deep);border-color:var(--pink)}
-.nav-in .brand.foot{color:var(--yellow-deep);border-color:var(--yellow)}
-.nav-in .brand.salon.here{background:var(--pink);color:#fff;border-color:transparent}
-.nav-in .brand.foot.here{background:var(--yellow);color:#fff;border-color:transparent}
-.nav-sep{width:1px;height:18px;background:var(--border);flex-shrink:0;margin:0 2px}
-.nav-in a.sec.active{color:#fff;border-color:transparent;font-weight:700;background:var(--accent)}
-.nav-in a.sec[data-c="green"].active{background:var(--green)}
-.nav-in a.sec[data-c="plain"].active{background:var(--ink-soft)}
+/* ブランド切替（常に固定表示・横スクロールしない） */
+.brands{display:flex;gap:5px;flex-shrink:0}
+.brands .brand{font-weight:700;display:flex;align-items:center;gap:4px;padding:4px 10px 4px 4px}
+.brands .brand img{width:19px;height:19px;border-radius:50%;object-fit:cover}
+.brands .brand.salon{color:var(--pink-deep);border-color:var(--pink)}
+.brands .brand.foot{color:var(--yellow-deep);border-color:var(--yellow)}
+.brands .brand.salon.here{background:var(--pink);color:#fff;border-color:transparent}
+.brands .brand.foot.here{background:var(--yellow);color:#fff;border-color:transparent}
+.nav-sep{width:1px;height:18px;background:var(--border);flex-shrink:0}
+/* セクションタブ（ここだけ横に流れる） */
+.nav-scroll{flex:1;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-scroll::-webkit-scrollbar{display:none}
+.secs{display:flex;gap:6px;width:max-content}
+.secs a.sec.active{color:#fff;border-color:transparent;font-weight:700;background:var(--accent)}
+.secs a.sec[data-c="green"].active{background:var(--green)}
+.secs a.sec[data-c="plain"].active{background:var(--ink-soft)}
 
 /* ===== hero ===== */
 .hero{
