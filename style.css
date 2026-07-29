@@ -150,7 +150,12 @@ section{padding:50px 0 6px}
 }
 .price-row:last-child{border-bottom:none;padding-bottom:0}
 .price-row .p{font-weight:700;font-size:14.5px}
-.set-mark{color:var(--accent-deep);font-size:12px;margin-left:5px;vertical-align:1px}
+.set-mark{
+  display:inline-block;font-size:10px;font-weight:500;
+  color:var(--accent-deep);background:var(--accent-soft);
+  border-radius:999px;padding:1px 9px;margin-left:6px;
+  vertical-align:2px;white-space:nowrap;letter-spacing:.02em;
+}
 
 /* special */
 .special{

@@ -74,7 +74,7 @@ function renderMenu(list) {
       .map((n) => ({ t: m[`時間${n}`], p: m[`料金${n}`] }))
       .filter((x) => x.t || x.p)
       .map((x) => {
-        const mark = isSetOnly(x.t) ? '<span class="set-mark">★</span>' : '';
+        const mark = isSetOnly(x.t) ? '<span class="set-mark">★セットメニュー</span>' : '';
         return `<div class="price-row"><span>${esc(x.t)}${mark}</span><span class="p">${esc(x.p)}</span></div>`;
       })
       .join('');
