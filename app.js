@@ -5,7 +5,7 @@
    （シートが読めなかった場合は HTML に書かれた内容がそのまま表示されます）
    =========================================================== */
 
-const SHEET_ID = '15VfrCymdVu9U75Dilv_6x8i_7PvdImh5qd0oPvwEF_s';
+const SHEET_ID = '1_E0iUEAtdjn18jivYYZ323UcCL2qTx7uKWUvCl99wSs';
 const PAGE = document.body.dataset.page;           // 'ふわりぃ' または 'い～よぉ'
 const PREFIX = document.body.dataset.prefix;       // 'salon' または 'foot'
 

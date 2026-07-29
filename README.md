@@ -6,7 +6,7 @@
 ## 料金や文章の変え方
 
 **編集用スプレッドシート**
-https://docs.google.com/spreadsheets/d/15VfrCymdVu9U75Dilv_6x8i_7PvdImh5qd0oPvwEF_s/edit
+https://docs.google.com/spreadsheets/d/1_E0iUEAtdjn18jivYYZ323UcCL2qTx7uKWUvCl99wSs/edit
 
 このシートを書き換えて保存すると、サイトを開き直したときに内容が切り替わります。
 GitHub の更新は不要です（スマホからでも編集できます）。
