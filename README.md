@@ -19,7 +19,8 @@ GitHub の更新は不要です（スマホからでも編集できます）。
 | 講座 | 講座。「ページ」列でどちらのページに出すかを指定 |
 | 基本情報 | 紹介文・営業時間・住所・ご案内文、および LINE / Instagram の URL |
 
-- LINE と Instagram のボタンは、基本情報シートの `salon.line` `salon.instagram` `foot.line` `foot.instagram` `school.line` `school.instagram` に URL を入れると有効になります（空のうちは案内メッセージが出ます）。
+- LINE と Instagram のボタンは、基本情報シートの `salon.line` `salon.instagram` `foot.line` `foot.instagram` `school.line`（南河内本校）`school.instagram`（南河内本校）に URL を入れると有効になります（空のうちは案内メッセージが出ます）。
+- い～よぉページの講座は、ストアカのページ（`school.hirano.url`）へのボタン1つです。
 - 「ご案内」などの文章では `<br>`（改行）や `<b>`（太字）が使えます。
 - シートが読み込めなかったときは、HTML に書かれている内容がそのまま表示されます。
 
