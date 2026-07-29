@@ -3,309 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fuwary～ふわりぃ～｜サロン・フットサロン・リラクゼーションスクール</title>
-<meta name="description" content="女性専用プライベートサロン Fuwary～ふわりぃ～（大阪狭山市・金剛周辺）、土曜限定フットサロン い～よぉ（平野区）、Fuwaryリラクゼーションスクールのご案内。">
+<title>Fuwary～ふわりぃ～｜女性専用プライベートサロン（大阪狭山市・金剛）</title>
+<meta name="description" content="大阪狭山市・金剛周辺の女性専用プライベートリラクゼーションサロン Fuwary～ふわりぃ～。バリニーズトリートメント・足裏リフレクソロジー・ボディケア。南河内本校のリラクゼーション講座も開講しています。">
 <link rel="icon" href="assets/logo_salon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#fdfaf4;
-  --bg-alt:#f8f2e9;
-  --ink:#5a4a42;
-  --ink-soft:#8f7f74;
-  --pink:#e39cb1;
-  --pink-soft:#fbeef2;
-  --pink-deep:#c9718c;
-  --green:#93bd8b;
-  --green-soft:#eef5ea;
-  --green-deep:#5f8f5a;
-  --yellow:#efb85e;
-  --yellow-soft:#fdf3df;
-  --yellow-deep:#b98322;
-  --card:#ffffff;
-  --radius:20px;
-  --line:#06c755;
-  --shadow:0 2px 6px rgba(90,74,66,.05),0 10px 28px rgba(90,74,66,.07);
-  --border:rgba(90,74,66,.09);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:62px}
-body{
-  font-family:"Zen Maru Gothic",sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.9;
-  letter-spacing:.03em;
-  font-size:14.5px;
-  font-feature-settings:"palt";
-  -webkit-font-smoothing:antialiased;
-}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:520px;margin:0 auto;padding:0 20px}
-
-/* ===== sticky header + nav (一体で追従) ===== */
-.topbar{
-  position:sticky;top:0;z-index:50;
-  background:rgba(253,250,244,.9);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--border);
-}
-.nav-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.nav-scroll::-webkit-scrollbar{display:none}
-.nav-in{display:flex;gap:7px;padding:9px 16px;width:max-content;margin:0 auto}
-.nav-in a{
-  flex-shrink:0;font-size:11.5px;font-weight:500;
-  padding:5px 13px;border-radius:999px;
-  background:#fff;border:1px solid var(--border);
-  color:var(--ink-soft);white-space:nowrap;
-  transition:all .25s ease;
-}
-.nav-in a.active{color:#fff;border-color:transparent;font-weight:700}
-.nav-in a[data-c="pink"].active{background:var(--pink)}
-.nav-in a[data-c="yellow"].active{background:var(--yellow)}
-.nav-in a[data-c="green"].active{background:var(--green)}
-.nav-in a[data-c="plain"].active{background:var(--ink-soft)}
-
-/* ===== hero ===== */
-.hero{
-  text-align:center;
-  padding:38px 20px 30px;
-  background:
-    radial-gradient(circle at 10% 12%, rgba(227,156,177,.13), transparent 32%),
-    radial-gradient(circle at 92% 6%, rgba(147,189,139,.14), transparent 28%),
-    var(--bg);
-}
-.hero-logo{
-  width:128px;height:128px;border-radius:50%;object-fit:cover;
-  margin:0 auto 16px;
-  box-shadow:0 6px 20px rgba(201,113,140,.22);
-  border:3px solid #fff;
-}
-.hero-tt .tag{
-  display:inline-block;font-size:11px;font-weight:500;color:var(--pink-deep);
-  background:var(--pink-soft);border-radius:999px;padding:3px 14px;margin-bottom:8px;
-}
-.hero-tt h1{font-size:22px;font-weight:700;line-height:1.4}
-.hero-tt .sub{font-size:11.5px;color:var(--ink-soft);margin-top:2px}
-.hero p.copy{max-width:520px;margin:16px auto 0;font-size:13.5px;color:var(--ink);text-align:left}
-.hero-cta{max-width:520px;margin:18px auto 0;display:flex;gap:10px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  font-weight:700;font-size:13.5px;border-radius:999px;
-  padding:12px 22px;box-shadow:var(--shadow);
-  transition:transform .15s ease;flex:1;
-}
-.btn:active{transform:scale(.97)}
-.btn-line{background:var(--line);color:#fff}
-.btn-ig{background:linear-gradient(45deg,#f9ce34,#ee2a7b 55%,#6228d7);color:#fff}
-.btn-icon{width:18px;height:18px;fill:currentColor}
-
-/* ===== sections ===== */
-section{padding:50px 0 6px}
-.sec-photo{
-  max-width:520px;margin:0 auto 24px;position:relative;overflow:hidden;
-  border-radius:var(--radius);box-shadow:var(--shadow);
-}
-.wrap .sec-photo{margin-left:0;margin-right:0}
-.sec-photo img{width:100%;height:148px;object-fit:cover}
-.sec-photo .ph-label{
-  position:absolute;left:14px;bottom:10px;color:#fff;font-size:10px;
-  letter-spacing:.3em;text-transform:uppercase;font-weight:500;
-  text-shadow:0 1px 6px rgba(0,0,0,.4);
-}
-.sec-head{text-align:center;margin-bottom:22px}
-.sec-badge{width:76px;height:76px;border-radius:50%;object-fit:cover;margin:0 auto 10px;box-shadow:var(--shadow);border:3px solid #fff}
-.sec-head .en{font-size:10px;letter-spacing:.32em;color:var(--ink-soft);text-transform:uppercase}
-.sec-head h2{font-size:19px;font-weight:700;margin-top:1px}
-.sec-head .lead{font-size:12px;color:var(--ink-soft);margin-top:6px}
-.deco{width:52px;height:3px;border-radius:2px;margin:12px auto 0}
-.pink-t .deco{background:var(--pink)}
-.yellow-t .deco{background:var(--yellow)}
-.green-t .deco{background:var(--green)}
-
-/* ===== cards ===== */
-.card{
-  background:var(--card);border-radius:var(--radius);
-  box-shadow:var(--shadow);border:1px solid var(--border);
-  padding:20px 18px;margin-bottom:14px;
-}
-.card h3{font-size:15.5px;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:4px}
-.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
-.pink-t .dot{background:var(--pink)}
-.green-t .dot{background:var(--green)}
-.card .note-tag{font-size:10.5px;color:var(--pink-deep);background:var(--pink-soft);border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:8px}
-.card p.desc{font-size:12.5px;color:var(--ink-soft);margin-bottom:10px}
-.price-row{
-  display:flex;justify-content:space-between;align-items:baseline;
-  padding:7px 2px;border-bottom:1px dashed rgba(90,74,66,.14);
-  font-size:13.5px;font-variant-numeric:tabular-nums;
-}
-.price-row:last-child{border-bottom:none;padding-bottom:0}
-.price-row .p{font-weight:700;font-size:14.5px}
-.price-row .set{font-size:10.5px;color:var(--green-deep);margin-left:6px;background:var(--green-soft);border-radius:999px;padding:1px 8px}
-
-/* special */
-.special{
-  position:relative;
-  background:linear-gradient(150deg,#fdeff4,#fffaf2 70%);
-  border:1.5px solid var(--pink);
-  border-radius:var(--radius);padding:22px 20px 18px;margin-bottom:14px;
-  box-shadow:0 6px 24px rgba(201,113,140,.14);
-  overflow:hidden;
-}
-.special::before{
-  content:"🍀";position:absolute;right:-6px;top:-10px;font-size:64px;opacity:.1;transform:rotate(18deg);
-}
-.special .ribbon{
-  display:inline-block;background:var(--pink);color:#fff;font-size:11px;font-weight:700;
-  border-radius:999px;padding:3px 14px;margin-bottom:8px;letter-spacing:.05em;
-}
-.special h3{font-size:17px;font-weight:700;line-height:1.5}
-.special .time{font-size:12.5px;color:var(--pink-deep);font-weight:700;margin-bottom:10px}
-.special ul{list-style:none;font-size:12.5px;color:var(--ink-soft);margin-bottom:12px;display:grid;grid-template-columns:1fr 1fr;gap:2px 8px}
-.special ul li::before{content:"🌸";font-size:9px;margin-right:6px}
-.special .price-line{display:flex;align-items:baseline;gap:10px;justify-content:flex-end;border-top:1px dashed rgba(201,113,140,.35);padding-top:10px}
-.special .old{font-size:12px;color:var(--ink-soft);text-decoration:line-through}
-.special .now{font-size:25px;font-weight:700;color:var(--pink-deep);font-variant-numeric:tabular-nums}
-.special .now small{font-size:12px;font-weight:500}
-
-/* options */
-.opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.opt{
-  background:var(--bg);border:1px solid var(--border);border-radius:14px;
-  padding:12px 10px;text-align:center;
-}
-.opt .o-name{font-weight:700;font-size:13px}
-.opt .o-time{font-size:10.5px;color:var(--ink-soft)}
-.opt .o-price{font-size:14.5px;font-weight:700;color:var(--pink-deep);margin-top:1px;font-variant-numeric:tabular-nums}
-.opt-note{font-size:11px;color:var(--ink-soft);margin-top:12px;line-height:1.8}
-
-/* ===== foot salon ===== */
-.foot-sec{background:var(--yellow-soft);margin-top:44px;padding-bottom:40px;border-radius:34px 34px 0 0}
-.badge-line{display:flex;justify-content:center;gap:6px;margin-bottom:12px;flex-wrap:wrap}
-.chip{font-size:10.5px;font-weight:700;background:#fff;color:var(--yellow-deep);border:1px solid var(--yellow);border-radius:999px;padding:3px 12px}
-.hours{
-  background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:12px 16px;margin:14px 0;
-  font-size:13px;text-align:center;
-}
-.hours b{color:var(--yellow-deep)}
-.big-price{text-align:center;margin:14px 0 4px}
-.big-price .n{font-size:27px;font-weight:700;color:var(--yellow-deep);font-variant-numeric:tabular-nums}
-.big-price .u{font-size:11.5px;color:var(--ink-soft);display:block;margin-top:2px}
-.addr{font-size:12px;color:var(--ink-soft);line-height:1.8;margin-top:12px;text-align:center;border-top:1px dashed rgba(185,131,34,.3);padding-top:12px}
-
-/* ===== school ===== */
-.school-sec{background:var(--green-soft);margin-top:44px;padding-bottom:40px;border-radius:34px 34px 0 0}
-.course{background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:16px 18px;margin-bottom:11px}
-.course-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.course h3{font-size:14.5px;font-weight:700}
-.course .c-price{font-size:16px;font-weight:700;color:var(--green-deep);white-space:nowrap;font-variant-numeric:tabular-nums}
-.course .c-time{font-size:11px;color:var(--green-deep);background:var(--green-soft);display:inline-block;border-radius:999px;padding:1px 10px;margin-top:4px}
-.course p{font-size:12px;color:var(--ink-soft);margin-top:6px}
-.c-list{margin-top:10px}
-.reco{background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow);margin:16px 0}
-.reco h3{font-size:13.5px;font-weight:700;text-align:center;margin-bottom:8px;color:var(--green-deep)}
-.reco li{list-style:none;font-size:12.5px;padding:3px 0}
-.reco li::before{content:"✿";color:var(--green);margin-right:8px}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
-.feat{
-  background:#fff;border:1px solid var(--border);border-radius:13px;padding:11px 5px;text-align:center;
-  font-size:10.5px;font-weight:700;color:var(--green-deep);line-height:1.5;
-}
-.place{background:#fff;border:1px solid var(--border);border-radius:15px;padding:13px 16px;margin-bottom:9px;font-size:13px;box-shadow:var(--shadow)}
-.place b{color:var(--green-deep)}
-.place span{display:block;font-size:11.5px;color:var(--ink-soft);line-height:1.8}
-
-/* ===== notes ===== */
-.notes{font-size:12px;color:var(--ink-soft);background:var(--bg-alt);border-radius:16px;padding:16px 18px;line-height:2}
-.notes b{color:var(--ink)}
-
-/* ===== contact ===== */
-.contact{text-align:center;padding:50px 0 36px}
-.contact .cards{display:flex;flex-direction:column;gap:14px;margin-top:18px}
-.rsv{
-  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
-  padding:18px 16px;text-align:left;border:1px solid var(--border);
-  border-top:4px solid;
-}
-.rsv.pink{border-top-color:var(--pink)}
-.rsv.yellow{border-top-color:var(--yellow)}
-.rsv.green{border-top-color:var(--green)}
-.rsv-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.rsv-logo{width:54px;height:54px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #fff;box-shadow:var(--shadow)}
-.rsv-name{font-weight:700;font-size:14.5px;line-height:1.4}
-.rsv-name small{display:block;font-size:10.5px;font-weight:400;color:var(--ink-soft)}
-.rsv-btns{display:flex;gap:8px}
-.rsv-btns .btn{flex:1;padding:11px 8px;font-size:12.5px;box-shadow:none}
-.contact .hint{font-size:11px;color:var(--ink-soft);margin-top:12px}
-
-footer{
-  text-align:center;font-size:10.5px;color:var(--ink-soft);
-  padding:24px 20px 36px;border-top:1px solid var(--border);
-}
-footer .f-logo{width:46px;height:46px;border-radius:50%;object-fit:cover;margin:0 auto 8px;border:2px solid #fff;box-shadow:var(--shadow)}
-footer .f-links{display:flex;justify-content:center;gap:14px;margin:8px 0 10px;font-size:11px}
-footer .f-links a{color:var(--ink-soft);border-bottom:1px dotted var(--border)}
-
-/* back to top */
-#toTop{
-  position:fixed;right:16px;bottom:18px;z-index:40;
-  width:42px;height:42px;border-radius:50%;
-  background:rgba(255,255,255,.92);border:1px solid var(--border);
-  box-shadow:var(--shadow);color:var(--pink-deep);
-  display:flex;align-items:center;justify-content:center;font-size:17px;
-  opacity:0;pointer-events:none;transition:opacity .3s ease;
-}
-#toTop.show{opacity:1;pointer-events:auto}
-
-/* reveal */
-.rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
-.rv.on{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-
-@media (min-width:640px){
-  body{font-size:15.5px}
-  .hero-tt h1{font-size:23px}
-  .sec-photo img{height:190px}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="ふわりぃ" data-prefix="salon" data-brand="salon">
 
 <div class="topbar">
   <div class="nav-scroll">
     <div class="nav-in" id="nav">
-      <a href="#menu" data-c="pink">ふわりぃ</a>
-      <a href="#foot" data-c="yellow">い～よぉ</a>
-      <a href="#school" data-c="green">講座</a>
-      <a href="#access" data-c="plain">ご案内</a>
-      <a href="#contact" data-c="plain">ご予約</a>
+      <a class="brand salon here" href="index.html"><img src="assets/logo_salon.jpg" alt="">ふわりぃ</a>
+      <a class="brand foot" href="iiyo.html"><img src="assets/logo_foot.jpg" alt="">い～よぉ</a>
+      <span class="nav-sep"></span>
+      <a class="sec" href="#menu">メニュー</a>
+      <a class="sec" href="#school" data-c="green">講座</a>
+      <a class="sec" href="#access" data-c="plain">ご案内</a>
+      <a class="sec" href="#contact" data-c="plain">ご予約</a>
     </div>
   </div>
 </div>
 
 <div class="hero">
   <img class="hero-logo rv" src="assets/logo_salon.jpg" alt="Fuwary～ふわりぃ～ ロゴ">
-  <div class="hero-tt rv">
+  <div class="rv">
     <span class="tag">🍀 女性専用プライベートサロン</span>
     <h1>Fuwary～ふわりぃ～</h1>
-    <div class="sub">リラクゼーション｜大阪狭山市・金剛周辺</div>
+    <div class="sub" data-info="salon.area">リラクゼーション｜大阪狭山市・金剛周辺</div>
   </div>
-  <p class="copy rv">
-    お友達の家に行く感覚で、お気軽にお越しいただける女性専用プライベートリラクゼーションサロンです。
-    普段頑張っているあなた自身へのご褒美に、優雅なヒトトキはいかがでしょうか。
+  <p class="copy rv" data-info="salon.copy">
+    お友達の家に行く感覚で、お気軽にお越しいただける女性専用プライベートリラクゼーションサロンです。普段頑張っているあなた自身へのご褒美に、優雅なヒトトキはいかがでしょうか。
   </p>
   <div class="hero-cta rv">
     <a class="btn btn-line" href="#contact">ご予約はこちら</a>
   </div>
 </div>
 
-<!-- salon menu -->
-<section id="menu" class="pink-t">
+<!-- サロンメニュー -->
+<section id="menu">
   <div class="wrap">
     <div class="sec-head rv">
       <div class="en">Menu</div>
@@ -319,31 +57,33 @@ footer .f-links a{color:var(--ink-soft);border-bottom:1px dotted var(--border)}
       <span class="ph-label">Relaxation</span>
     </div>
 
-    <div class="card rv">
-      <h3><span class="dot"></span>バリニーズトリートメント</h3>
-      <span class="note-tag">フットバス付き</span>
-      <p class="desc">オイルを使い、リンパの流れに沿って身体のコリをほぐし、疲労やストレスを解消し自然治癒力を高め、心地よいリラクゼーション効果があります。</p>
-      <div class="price-row"><span>40分<span class="set">☆セット可</span></span><span class="p">¥4,000</span></div>
-      <div class="price-row"><span>60分</span><span class="p">¥6,500</span></div>
-      <div class="price-row"><span>70分</span><span class="p">¥7,000</span></div>
+    <!-- ↓ スプレッドシート「メニュー」から差し替わります -->
+    <div id="menu-list">
+      <div class="card rv">
+        <h3><span class="dot"></span>バリニーズトリートメント</h3>
+        <span class="note-tag">フットバス付き</span>
+        <p class="desc">オイルを使い、リンパの流れに沿って身体のコリをほぐし、疲労やストレスを解消し自然治癒力を高め、心地よいリラクゼーション効果があります。</p>
+        <div class="price-row"><span>40分</span><span class="p">¥4,000</span></div>
+        <div class="price-row"><span>60分</span><span class="p">¥6,500</span></div>
+        <div class="price-row"><span>70分</span><span class="p">¥7,000</span></div>
+      </div>
+      <div class="card rv">
+        <h3><span class="dot"></span>足裏・リフレクソロジー</h3>
+        <span class="note-tag">フットバス付き</span>
+        <p class="desc">オイルを使い足裏をほぐし、むくみ解消・リラックス効果も高めてくれます。反射区を刺激することで内臓の活性化により血流が良くなり、身体も温まります。ふくらはぎ・膝下までを施術いたします。</p>
+        <div class="price-row"><span>30分</span><span class="p">¥3,000</span></div>
+        <div class="price-row"><span>45分</span><span class="p">¥4,500</span></div>
+      </div>
+      <div class="card rv">
+        <h3><span class="dot"></span>ボディケア</h3>
+        <p class="desc">服を着たままで全身のコリをほぐしていきます。ご希望の箇所を重点的に施術することも可能です。血行も良くなり疲労回復・免疫力アップの効果も期待できます。</p>
+        <div class="price-row"><span>30分</span><span class="p">¥2,800</span></div>
+        <div class="price-row"><span>60分</span><span class="p">¥5,000</span></div>
+      </div>
     </div>
 
-    <div class="card rv">
-      <h3><span class="dot"></span>足裏・リフレクソロジー</h3>
-      <span class="note-tag">フットバス付き</span>
-      <p class="desc">オイルを使い足裏をほぐし、むくみ解消・リラックス効果も高めてくれます。反射区を刺激することで内臓の活性化により血流が良くなり、身体も温まります。ふくらはぎ・膝下までを施術いたします。</p>
-      <div class="price-row"><span>30分<span class="set">☆セット可</span></span><span class="p">¥3,000</span></div>
-      <div class="price-row"><span>45分</span><span class="p">¥4,500</span></div>
-    </div>
-
-    <div class="card rv">
-      <h3><span class="dot"></span>ボディケア</h3>
-      <p class="desc">服を着たままで全身のコリをほぐしていきます。ご希望の箇所を重点的に施術することも可能です。血行も良くなり疲労回復・免疫力アップの効果も期待できます。</p>
-      <div class="price-row"><span>30分<span class="set">☆セット可</span></span><span class="p">¥2,800</span></div>
-      <div class="price-row"><span>60分</span><span class="p">¥5,000</span></div>
-    </div>
-
-    <div class="special rv">
+    <!-- ↓ スプレッドシート「スペシャル」から差し替わります -->
+    <div class="special rv" id="special-box">
       <span class="ribbon">いつでも～ふわりぃ～</span>
       <h3>ご褒美スペシャルコース</h3>
       <div class="time">じっくり癒しの120分コース</div>
@@ -363,63 +103,25 @@ footer .f-links a{color:var(--ink-soft);border-bottom:1px dotted var(--border)}
 
     <div class="card rv">
       <h3><span class="dot"></span>オプションメニュー</h3>
-      <div class="opt-grid">
+      <!-- ↓ スプレッドシート「オプション」から差し替わります -->
+      <div class="opt-grid" id="option-list">
         <div class="opt"><div class="o-name">耳リフレ</div><div class="o-time">10分</div><div class="o-price">¥500</div></div>
         <div class="opt"><div class="o-name">ヘッドリフレ</div><div class="o-time">15分</div><div class="o-price">¥1,000</div></div>
         <div class="opt"><div class="o-name">ハンドリフレ</div><div class="o-time">15分</div><div class="o-price">¥1,000</div></div>
         <div class="opt"><div class="o-name">腸セラピー</div><div class="o-time">15分</div><div class="o-price">¥1,000</div></div>
       </div>
-      <p class="opt-note">※ご予約は45分以上の施術をお願いいたします。<br>☆セットメニューは2つ以上のメニューを組み合わせてご注文いただけます。</p>
+      <p class="opt-note" data-info="salon.menuNote">※ご予約は45分以上の施術をお願いいたします。<br>☆セットメニューは2つ以上のメニューを組み合わせてご注文いただけます。</p>
     </div>
   </div>
 </section>
 
-<!-- foot salon -->
-<section id="foot" class="yellow-t foot-sec">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <img class="sec-badge" src="assets/logo_foot.jpg" alt="フットサロン い～よぉ ロゴ">
-      <div class="en">Foot Salon</div>
-      <h2>フットサロン い～よぉ</h2>
-      <div class="lead">がんばる女性のための 土曜日限定フットサロン</div>
-      <div class="deco"></div>
-    </div>
-
-    <div class="sec-photo rv">
-      <img src="assets/photo_foot.png" alt="フットマッサージ">
-      <span class="ph-label">Foot Care</span>
-    </div>
-
-    <div class="card rv">
-      <div class="badge-line">
-        <span class="chip">土曜日限定</span>
-        <span class="chip">むくみ・疲労に特化</span>
-        <span class="chip">Fuwary姉妹店</span>
-      </div>
-      <p class="desc" style="text-align:center">足裏から膝までしっかりほぐします！<br>心も足も体も軽やかになりませんか？</p>
-      <div class="hours">
-        <b>営業時間</b>（土曜日のみ）<br>
-        14:00～16:30（最終受付 15:30）
-      </div>
-      <div class="big-price">
-        <span class="n">50分 ¥6,000</span>
-        <span class="u">仕上げにボディケア5分付き・60分コースもあります</span>
-      </div>
-      <p class="addr">
-        〒547-0004 大阪府大阪市平野区加美鞍作1丁目11-9<br>
-        レンタルサロン hito-toki 加美A棟 1102号室
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- school -->
+<!-- 講座（南河内 本校） -->
 <section id="school" class="green-t school-sec">
   <div class="wrap">
     <div class="sec-head rv">
       <img class="sec-badge" src="assets/logo_school.jpg" alt="Fuwary リラクゼーションスクール ロゴ">
       <div class="en">School</div>
-      <h2>リラクゼーションスクール</h2>
+      <h2>リラクゼーション講座</h2>
       <div class="lead">初心者の方でも安心して学べます</div>
       <div class="deco"></div>
     </div>
@@ -429,40 +131,45 @@ footer .f-links a{color:var(--ink-soft);border-bottom:1px dotted var(--border)}
       <span class="ph-label">School</span>
     </div>
 
-    <div class="course rv">
-      <div class="course-top">
-        <h3>足裏リフレクソロジー講座</h3>
-        <span class="c-price">35,000円</span>
-      </div>
-      <span class="c-time">1ST編 3時間 ＋ 2ND編 約90分</span>
-      <p>1ST編で30分の足裏から膝までの施術ができるように。2ND編は1ST編修了後、ツボの復習とパワーアップ！</p>
+    <div class="school-place rv">
+      <b data-info="salon.schoolName">南河内 本校</b>
+      <span data-info="salon.schoolSchedule">開催日はご相談ください</span>
     </div>
 
-    <div class="course rv">
-      <div class="course-top">
-        <h3>ハンドケア1日講座</h3>
-        <span class="c-price">10,000円</span>
+    <!-- ↓ スプレッドシート「講座」から差し替わります -->
+    <div id="course-list">
+      <div class="course rv">
+        <div class="course-top">
+          <h3>足裏リフレクソロジー講座</h3>
+          <span class="c-price">35,000円</span>
+        </div>
+        <span class="c-time">1ST編 3時間 ＋ 2ND編 約90分</span>
+        <p>1ST編で30分の足裏から膝までの施術ができるように。2ND編は1ST編修了後、ツボの復習とパワーアップ！</p>
       </div>
-      <span class="c-time">約2時間</span>
-      <p>手のひらから肘までの施術ができるようになります。</p>
-    </div>
-
-    <div class="course rv">
-      <div class="course-top">
-        <h3>ボディケア講座</h3>
-        <span class="c-price">15,000円</span>
+      <div class="course rv">
+        <div class="course-top">
+          <h3>ハンドケア1日講座</h3>
+          <span class="c-price">10,000円</span>
+        </div>
+        <span class="c-time">約2時間</span>
+        <p>手のひらから肘までの施術ができるようになります。</p>
       </div>
-      <span class="c-time">120分</span>
-      <p>服を着たままでできるボディケアを楽しく学べます！</p>
-    </div>
-
-    <div class="course rv">
-      <div class="course-top">
-        <h3>耳ケア プチ講座</h3>
-        <span class="c-price">6,000円</span>
+      <div class="course rv">
+        <div class="course-top">
+          <h3>ボディケア講座</h3>
+          <span class="c-price">15,000円</span>
+        </div>
+        <span class="c-time">120分</span>
+        <p>服を着たままでできるボディケアを楽しく学べます！</p>
       </div>
-      <span class="c-time">約60分</span>
-      <p>耳マッサージでむくみすっきり！お天気痛対策にも！心もほっこり♡</p>
+      <div class="course rv">
+        <div class="course-top">
+          <h3>耳ケア プチ講座</h3>
+          <span class="c-price">6,000円</span>
+        </div>
+        <span class="c-time">約60分</span>
+        <p>耳マッサージでむくみすっきり！お天気痛対策にも！心もほっこり♡</p>
+      </div>
     </div>
 
     <div class="reco rv">
@@ -485,22 +192,17 @@ footer .f-links a{color:var(--ink-soft);border-bottom:1px dotted var(--border)}
         <div class="feat">開催日は<br>ご相談OK</div>
       </div>
     </div>
-
-    <div style="margin-top:16px">
-      <div class="place rv"><b>南河内 本校</b><span>開催日はご相談ください<br>足裏リフレクソロジー 3DAYS／ハンドケア 1DAY／ボディケア 1DAY／耳ケア プチ講座</span></div>
-      <div class="place rv"><b>平野店</b><span>開講日：火曜 10:00～／土曜 14:00～<br>足裏リフレクソロジー 1DAY／ハンドケア 1DAY</span></div>
-    </div>
   </div>
 </section>
 
-<!-- access / notes -->
+<!-- ご案内 -->
 <section id="access">
   <div class="wrap">
     <div class="sec-head rv">
       <div class="en">Information</div>
       <h2>ご案内</h2>
     </div>
-    <div class="notes rv">
+    <div class="notes rv" data-info="salon.info">
       🏠 <b>大阪狭山市、金剛周辺</b>自宅の小さなプライベートサロンです。場所の詳細はご予約確定後にご案内いたします。<br>
       📅 <b>完全予約制</b>です。ご予約・お問い合わせはLINEまたはInstagramからどうぞ。<br>
       ⚠️ 当サロンは、医療行為・治癒類ではございません。現在治療中の方は、主治医にご相談のうえご予約頂きますようお願いいたします。
@@ -508,7 +210,7 @@ footer .f-links a{color:var(--ink-soft);border-bottom:1px dotted var(--border)}
   </div>
 </section>
 
-<!-- contact -->
+<!-- ご予約 -->
 <section id="contact" class="contact">
   <div class="wrap">
     <div class="sec-head rv">
@@ -518,90 +220,51 @@ footer .f-links a{color:var(--ink-soft);border-bottom:1px dotted var(--border)}
     </div>
     <div class="cards">
 
-      <!-- ふわりぃ（サロン） TODO: LINE/InstagramのURLを設定 -->
       <div class="rsv pink rv">
         <div class="rsv-head">
           <img class="rsv-logo" src="assets/logo_salon.jpg" alt="Fuwary～ふわりぃ～ ロゴ">
-          <div class="rsv-name">Fuwary～ふわりぃ～<small>女性専用プライベートサロン（大阪狭山市）</small></div>
+          <div class="rsv-name">サロンのご予約<small>Fuwary～ふわりぃ～（大阪狭山市）</small></div>
         </div>
         <div class="rsv-btns">
-          <a class="btn btn-line" href="#" onclick="alert('ふわりぃのLINE URLを設定してください');return false;"><svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.03 3.58 7.4 8.41 8.04.33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.56 13.35 22 11.8 22 10.13 22 5.64 17.52 2 12 2z"/></svg>LINE予約</a>
-          <a class="btn btn-ig" href="#" onclick="alert('ふわりぃのInstagram URLを設定してください');return false;"><svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>Instagram</a>
+          <a class="btn btn-line" data-link="salon.line" href="#" onclick="alert('LINEのURLはスプレッドシートの「基本情報」に入力してください');return false;"><svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.03 3.58 7.4 8.41 8.04.33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.56 13.35 22 11.8 22 10.13 22 5.64 17.52 2 12 2z"/></svg>LINE予約</a>
+          <a class="btn btn-ig" data-link="salon.instagram" href="#" onclick="alert('InstagramのURLはスプレッドシートの「基本情報」に入力してください');return false;"><svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>Instagram</a>
         </div>
       </div>
 
-      <!-- い～よぉ（フットサロン） TODO: LINE/InstagramのURLを設定 -->
-      <div class="rsv yellow rv">
-        <div class="rsv-head">
-          <img class="rsv-logo" src="assets/logo_foot.jpg" alt="フットサロン い～よぉ ロゴ">
-          <div class="rsv-name">フットサロン い～よぉ<small>土曜日限定（大阪市平野区）</small></div>
-        </div>
-        <div class="rsv-btns">
-          <a class="btn btn-line" href="#" onclick="alert('い～よぉのLINE URLを設定してください');return false;"><svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.03 3.58 7.4 8.41 8.04.33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.56 13.35 22 11.8 22 10.13 22 5.64 17.52 2 12 2z"/></svg>LINE予約</a>
-          <a class="btn btn-ig" href="#" onclick="alert('い～よぉのInstagram URLを設定してください');return false;"><svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>Instagram</a>
-        </div>
-      </div>
-
-      <!-- リラクゼーションスクール TODO: LINE/InstagramのURLを設定 -->
       <div class="rsv green rv">
         <div class="rsv-head">
           <img class="rsv-logo" src="assets/logo_school.jpg" alt="Fuwary リラクゼーションスクール ロゴ">
-          <div class="rsv-name">Fuwary リラクゼーションスクール<small>南河内 本校／平野店</small></div>
+          <div class="rsv-name">講座のお申込み<small>Fuwary リラクゼーションスクール 南河内 本校</small></div>
         </div>
         <div class="rsv-btns">
-          <a class="btn btn-line" href="#" onclick="alert('スクールのLINE URLを設定してください');return false;"><svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.03 3.58 7.4 8.41 8.04.33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.56 13.35 22 11.8 22 10.13 22 5.64 17.52 2 12 2z"/></svg>LINE申込</a>
-          <a class="btn btn-ig" href="#" onclick="alert('スクールのInstagram URLを設定してください');return false;"><svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>Instagram</a>
+          <a class="btn btn-line" data-link="school.line" href="#" onclick="alert('LINEのURLはスプレッドシートの「基本情報」に入力してください');return false;"><svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.03 3.58 7.4 8.41 8.04.33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.56 13.35 22 11.8 22 10.13 22 5.64 17.52 2 12 2z"/></svg>LINE申込</a>
+          <a class="btn btn-ig" data-link="school.instagram" href="#" onclick="alert('InstagramのURLはスプレッドシートの「基本情報」に入力してください');return false;"><svg class="btn-icon" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>Instagram</a>
         </div>
       </div>
 
     </div>
     <p class="hint">DMからもお気軽にお問い合わせください♪</p>
+
+    <a class="sister rv" href="iiyo.html">
+      <img src="assets/logo_foot.jpg" alt="">
+      <span class="t">フットサロン い～よぉ<small>土曜日限定・大阪市平野区／平野店の講座もこちら</small></span>
+      <span class="go">見る →</span>
+    </a>
   </div>
 </section>
 
 <footer>
-  Fuwary～ふわりぃ～／フットサロン い～よぉ／Fuwary リラクゼーションスクール
+  Fuwary～ふわりぃ～
   <div class="f-links">
-    <a href="#menu">ふわりぃ</a>
-    <a href="#foot">い～よぉ</a>
+    <a href="#menu">メニュー</a>
     <a href="#school">講座</a>
+    <a href="iiyo.html">い～よぉ</a>
     <a href="#contact">ご予約</a>
   </div>
   © Fuwary　※写真はイメージです
 </footer>
 
 <a id="toTop" href="#" aria-label="ページ上部へ">↑</a>
-
-<script>
-// ふわっと表示
-const io = new IntersectionObserver((es)=>{
-  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target);} });
-},{threshold:.1});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-
-// ナビのスクロール連動ハイライト
-const links=[...document.querySelectorAll('#nav a')];
-const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
-const navBox=document.querySelector('.nav-scroll');
-let lastIdx=-2;
-function spy(){
-  const y=scrollY+90;
-  let idx=-1;
-  secs.forEach((s,i)=>{ if(s && s.offsetTop<=y) idx=i; });
-  if(idx!==lastIdx){
-    lastIdx=idx;
-    links.forEach((a,i)=>a.classList.toggle('active',i===idx));
-    // ナビ内だけ横スクロール（scrollIntoViewはページ全体が動くので使わない）
-    if(idx>=0){
-      const p=links[idx];
-      navBox.scrollTo({left:p.offsetLeft-(navBox.clientWidth-p.offsetWidth)/2,behavior:'smooth'});
-    }
-  }
-  document.getElementById('toTop').classList.toggle('show',scrollY>600);
-}
-let tick=false;
-addEventListener('scroll',()=>{ if(!tick){ tick=true; requestAnimationFrame(()=>{ spy(); tick=false; }); } },{passive:true});
-spy();
-</script>
+<script src="app.js"></script>
 </body>
 </html>
