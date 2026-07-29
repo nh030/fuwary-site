@@ -167,6 +167,20 @@ function initUI() {
   const toTop = document.getElementById('toTop');
   let lastIdx = -2;
 
+  /* 選択中のタブがタブ表示エリアから外れていたら、見える位置まで寄せる
+     （offsetLeft は基準要素によってずれるため、実際の表示位置で判定する） */
+  function ensureTabVisible(el) {
+    if (!navBox || !el) return;
+    const box = navBox.getBoundingClientRect();
+    const tab = el.getBoundingClientRect();
+    const pad = 10;
+    if (tab.left < box.left + pad) {
+      navBox.scrollBy({ left: tab.left - box.left - pad, behavior: 'smooth' });
+    } else if (tab.right > box.right - pad) {
+      navBox.scrollBy({ left: tab.right - box.right + pad, behavior: 'smooth' });
+    }
+  }
+
   function spy() {
     const y = scrollY + 90;
     let idx = -1;
@@ -174,10 +188,7 @@ function initUI() {
     if (idx !== lastIdx) {
       lastIdx = idx;
       links.forEach((a, i) => a.classList.toggle('active', i === idx));
-      if (idx >= 0 && navBox) {
-        const p = links[idx];
-        navBox.scrollTo({ left: p.offsetLeft - (navBox.clientWidth - p.offsetWidth) / 2, behavior: 'smooth' });
-      }
+      if (idx >= 0) ensureTabVisible(links[idx]);
     }
     if (toTop) toTop.classList.toggle('show', scrollY > 600);
   }
