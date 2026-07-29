@@ -54,6 +54,16 @@ const esc = (s) => String(s).replace(/[<>]/g, (c) => ({ '<': '&lt;', '>': '&gt;'
 
 /* ---------- 描画 ---------- */
 
+/* 45分未満のコースは単品では予約できず、組み合わせが必要なので★を付ける
+   （ふわりぃのサロンメニューのみ。時間欄に自分で★を書いた場合はそれを優先） */
+const SET_ONLY_MINUTES = 45;
+function isSetOnly(timeText) {
+  if (PAGE !== 'ふわりぃ') return false;
+  if (String(timeText).includes('★')) return false;
+  const m = String(timeText).match(/(\d+)\s*分/);
+  return m ? Number(m[1]) < SET_ONLY_MINUTES : false;
+}
+
 function renderMenu(list) {
   const box = document.getElementById('menu-list');
   if (!box) return;
@@ -63,7 +73,10 @@ function renderMenu(list) {
     const prices = [1, 2, 3]
       .map((n) => ({ t: m[`時間${n}`], p: m[`料金${n}`] }))
       .filter((x) => x.t || x.p)
-      .map((x) => `<div class="price-row"><span>${esc(x.t)}</span><span class="p">${esc(x.p)}</span></div>`)
+      .map((x) => {
+        const mark = isSetOnly(x.t) ? '<span class="set-mark">★</span>' : '';
+        return `<div class="price-row"><span>${esc(x.t)}${mark}</span><span class="p">${esc(x.p)}</span></div>`;
+      })
       .join('');
     return `<div class="card rv on">
       <h3><span class="dot"></span>${esc(m['メニュー名'])}</h3>

@@ -150,6 +150,7 @@ section{padding:50px 0 6px}
 }
 .price-row:last-child{border-bottom:none;padding-bottom:0}
 .price-row .p{font-weight:700;font-size:14.5px}
+.set-mark{color:var(--accent-deep);font-size:12px;margin-left:5px;vertical-align:1px}
 
 /* special */
 .special{
