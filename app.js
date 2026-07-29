@@ -9,8 +9,10 @@ const SHEET_ID = '1_E0iUEAtdjn18jivYYZ323UcCL2qTx7uKWUvCl99wSs';
 const PAGE = document.body.dataset.page;           // 'ふわりぃ' または 'い～よぉ'
 const PREFIX = document.body.dataset.prefix;       // 'salon' または 'foot'
 
+/* headers=1 は必須。省略すると Google 側が「何行目までが見出しか」を勝手に推測し、
+   全部の行を見出しとみなして1行に連結した CSV を返すことがある。 */
 const csvUrl = (sheetName) =>
-  `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(sheetName)}&_=${Date.now()}`;
+  `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&headers=1&sheet=${encodeURIComponent(sheetName)}&_=${Date.now()}`;
 
 /* ---------- CSV パース ---------- */
 function parseCSV(text) {
